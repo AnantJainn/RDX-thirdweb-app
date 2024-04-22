@@ -1,0 +1,184 @@
+@import "./apps.css";
+
+.services{
+  background: linear-gradient(180deg, #202020, #202020);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.listContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Ensures there is space between the items */
+  gap: 10px; /* Adds space between the boxes vertically and horizontally */
+  max-width: 766px;
+  /* margin: auto; */
+}
+
+.box {
+  width: calc(48% - 200px); /* Adjusts the width so two boxes fit within the container width minus the gap */
+  padding: 10px;
+  border: 5px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin: 10px 60px 50px; /* Adds vertical space between the rows of boxes */
+}
+
+/* Responsive adjustments for mobile */
+@media (max-width: 768px) {
+  .box {
+    width: 100%; /* On smaller screens, make each box full width to stack them vertically */
+    padding: 20px; /* Adjust padding for smaller screens */
+    margin: 10px 0; /* Maintain vertical spacing */
+  }
+
+  /* Further adjust the container and other elements for mobile */
+  .listContainer {
+    flex-direction: column;
+    gap: 10px; /* Adjusts gap for smaller screens if necessary */
+  }
+}
+
+
+/* If you have a specific container width or padding, you might need to adjust the max-width calculation above */
+
+
+.textContainer {
+  flex: 1;
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  text-align: right;
+}
+
+ .textContainer p {
+  font-weight: 200;
+  font-size: 20px;
+  color: gray;
+}
+
+ .textContainer hr {
+  width: 500px;
+  border: none;
+  border-top: 0.5px solid gray;
+}
+
+ .titleContainer {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+ .titleContainer .title {
+  display: flex;
+  align-items: center;
+  gap: 50px;
+}
+
+ .titleContainer .title img {
+  width: 300px;
+  height: 100px;
+  border-radius: 50px;
+  object-fit: cover;
+}
+
+ .titleContainer .title h1 {
+  font-size: 6px;
+  font-weight: 100;
+}
+
+ .titleContainer .title button {
+  width: 200px;
+  height: 60px;
+  border-radius: 50px;
+  background-color: #e8dbfd;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.listContainer{
+  flex: 2;
+  display: flex;
+  max-width: 1066px;
+  margin: auto;
+}
+
+  .box {
+  padding: 50px;
+  border: 0.5px solid gray;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+  .box button {
+  padding: 10px;
+  background-color: #e8dbfd;
+  border: none;
+  /* cursor: pointer; */
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+   .textContainer {
+    align-self: center;
+    text-align: center;
+    flex-direction: column;
+  }
+
+   .textContainer hr {
+    width: 300px;
+  }
+
+   .titleContainer {
+    width: 100%;
+  }
+
+   .titleContainer .title,
+    .box {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+   .titleContainer .title img {
+    width: 200px;
+    height: 50px;
+  }
+
+   .titleContainer .title h1 {
+    font-size: 26px;
+  }
+
+   .titleContainer .title button,
+    .box button {
+    font-size: 16px;
+    width: 150px;
+    height: 50px;
+  }
+
+    .box {
+    border: none;
+    align-items: center;
+    gap: 20px;
+    padding: 10px;
+  }
+
+    .box p {
+    display: none;
+  }
+
+    .box button {
+    background-color: transparent;
+    border: 1px solid #e8dbfd;
+    border-radius: 5px;
+    color: #5e0ce1;
+    width: 50%;
+    padding: 5px;
+  }
+}
