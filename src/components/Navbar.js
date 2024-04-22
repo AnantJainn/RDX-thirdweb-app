@@ -1,26 +1,26 @@
 import React, { useState } from "react";
 import { useAddress, useDisconnect } from "@thirdweb-dev/react";
 import { ConnectWallet } from "@thirdweb-dev/react";
-// import { useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const address = useAddress();
-  //   const navigate = useNavigate();
+  const navigate = useNavigate();
   const disconnect = useDisconnect();
   const [dropdownOpen, setDropdownOpen] = useState(false);
 
-  //   const handleProfileClick = () => {
-  //     if (address) {
-  //       navigate(`/profile/${address}`);
-  //     }
-  //   };
-
-  //   const handleHome = () => {
-  //     navigate("/");
-  //   };
-  const handleProfile = () => {
-    window.location.href = "/profile";
+  const handleProfileClick = () => {
+    if (address) {
+      navigate(`/profile/${address}`);
+    }
   };
+
+  const handleHome = () => {
+    navigate("/");
+  };
+  // const handleProfile = () => {
+  //   window.location.href = `/profile/${address}`;
+  // };
   const handleDropdownToggle = () => {
     setDropdownOpen(!dropdownOpen);
   };
@@ -59,7 +59,9 @@ const Navbar = () => {
   return (
     <div style={containerStyle}>
       <div style={flexStyle}>
-        <h1 style={textStyles}>Raindrops X</h1>
+        <h1 style={textStyles} onClick={handleHome}>
+          Raindrops X
+        </h1>
 
         {!address ? (
           <ConnectWallet
@@ -92,7 +94,7 @@ const Navbar = () => {
                 }}
               >
                 <ul style={{ listStyle: "none", padding: "0", margin: "0" }}>
-                  <li style={menuItemStyle} onClick={handleProfile}>
+                  <li style={menuItemStyle} onClick={handleProfileClick}>
                     Profile
                   </li>
                   <li style={menuItemStyle} onClick={disconnect}>

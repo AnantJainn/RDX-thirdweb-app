@@ -1951,6 +1951,16 @@
   resolved "https://registry.yarnpkg.com/@floating-ui/utils/-/utils-0.2.1.tgz#16308cea045f0fc777b6ff20a9f25474dd8293d2"
   integrity sha512-9TANp6GPoMtYzQdt54kfAyMmz1+osLlXdg2ENroU7zzrtflTLrrC/lgrIfaSe+Wu0b89GKccT7vxXA0MoAIO+Q==
 
+"@fontsource/akaya-telivigala@^5.0.13":
+  version "5.0.13"
+  resolved "https://registry.yarnpkg.com/@fontsource/akaya-telivigala/-/akaya-telivigala-5.0.13.tgz#eae158b0e1439e7ac50153ea680cf1b37d9a6ce0"
+  integrity sha512-bwYaFRrk5XlIdgZBmx+hKC/udwhKAAxjo+PC4KRc+iR1PW/Uy25GULkhDnuGXhgvtvImjwQi9eFMmYzrkb8goQ==
+
+"@fontsource/sora@^5.0.18":
+  version "5.0.18"
+  resolved "https://registry.yarnpkg.com/@fontsource/sora/-/sora-5.0.18.tgz#737d239accb9669593eb1ab62bd2060d05cbdcd9"
+  integrity sha512-ti9nr3/pRdxUVSAXdO5wX92KFFH55KwKgKX45dIA9DJcpV+tGgATdu14RYSbg1wGwxjL7z9tWHapcZJdjPp1UQ==
+
 "@google-cloud/kms@4.2.0":
   version "4.2.0"
   resolved "https://registry.yarnpkg.com/@google-cloud/kms/-/kms-4.2.0.tgz#7d8c1c1c7f906bdf6b5504518967aa9834a31375"
@@ -10954,6 +10964,11 @@ normalize-url@^6.0.1:
   version "6.1.0"
   resolved "https://registry.yarnpkg.com/normalize-url/-/normalize-url-6.1.0.tgz#40d0885b535deffe3f3147bec877d05fe4c5668a"
   integrity sha512-DlL+XwOy3NxAQ8xuC0okPgK46iuVNAK01YN7RueYBqqFeGsBjV9XmCAzAdgt+667bCl5kPh9EqKKDwnaPG1I7A==
+
+normalize.css@^8.0.1:
+  version "8.0.1"
+  resolved "https://registry.yarnpkg.com/normalize.css/-/normalize.css-8.0.1.tgz#9b98a208738b9cc2634caacbc42d131c97487bf3"
+  integrity sha512-qizSNPO93t1YUuUhP22btGOo3chcvDFqFaj2TRybP0DMxkHOCTYwp3n34fel4a31ORXy4m1Xq0Gyqpb5m33qIg==
 
 npm-run-path@^4.0.1:
   version "4.0.1"

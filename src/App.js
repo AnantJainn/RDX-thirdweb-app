@@ -43,8 +43,10 @@
 import { Routes, Route } from "react-router-dom";
 
 // import GlobalStyles from "./Styles/GlobalStyles";
-// import { ThemeProvider } from "styled-components";
-// import { light } from "./Styles/Themes";
+import GlobalStyles from "./Styles/GlobalStyles";
+import { ThemeProvider } from "styled-components";
+
+import { light } from "./Styles/Themes";
 import Navigation from "./components/Navigation";
 import Home from "./sections/Home";
 import About from "./sections/About";
@@ -56,6 +58,7 @@ import Footer from "./sections/footer";
 import Services from "./sections/Services";
 import NFTDrop from "./components/NFTDrop";
 import Profile from "./Pages/Profile";
+import Landing from "./Pages/Landing";
 import {
   ThirdwebProvider,
   // ConnectWallet,  // If not used directly here, no need to import
@@ -93,8 +96,10 @@ function App() {
         ),
       ]}
     >
-      <Routes>
-        <Route
+      <GlobalStyles />
+      <ThemeProvider theme={light}>
+        <Routes>
+          {/* <Route
           path="/"
           element={
             <>
@@ -104,15 +109,17 @@ function App() {
               <Services />
               <Roadmap />
               <Showcase />
-              {/* <Team /> */}
+              
               <Faq />
               <Footer />
             </>
           }
-        />
-        <Route path="/nft-drop" element={<NFTDrop />} />
-        <Route path="/profile/:address" element={<Profile />} />
-      </Routes>
+        /> */}
+          <Route path="/" element={<Landing />} />
+          <Route path="/nft-drop" element={<NFTDrop />} />
+          <Route path="/profile/:address" element={<Profile />} />
+        </Routes>
+      </ThemeProvider>
     </ThirdwebProvider>
   );
 }
