@@ -1,11 +1,12 @@
 import React, { lazy, Suspense } from "react";
 import styled, { ThemeProvider } from "styled-components";
 // import Carousel from '../Carousel'
-import Button from "../Button";
-import { dark } from "../../Styles/Themes";
-import Loading from "../Loading";
 
-const Carousel = lazy(() => import("../Carousel"));
+import Button from "../components/Button";
+// import { dark } from "../../Styles/Themes";
+import Loading from "../components/Loading";
+
+const Carousel = lazy(() => import("../components/Carousel"));
 
 const Section = styled.section`
   min-height: 100vh;
@@ -154,9 +155,7 @@ const About = () => {
           </SubText>
 
           <ButtonContainer>
-            <ThemeProvider theme={dark}>
-              <Button text="JOIN OUR DISCORD" link="#" />
-            </ThemeProvider>
+            <Button text="JOIN OUR DISCORD" link="#" />
           </ButtonContainer>
         </Box>
       </Container>

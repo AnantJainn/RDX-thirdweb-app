@@ -2,7 +2,8 @@ import gsap from "gsap";
 import ScrollTrigger from "gsap/ScrollTrigger";
 import React, { useLayoutEffect, useRef } from "react";
 import styled from "styled-components";
-import DrawSvg from "../DrawSvg";
+// import DrawSvg from "../DrawSvg";
+import DrawSvg from "../components/DrawSvg";
 
 const Section = styled.section`
   min-height: 100vh;

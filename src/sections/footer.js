@@ -1,13 +1,15 @@
 import React from "react";
 import styled from "styled-components";
-import Button from "../Button";
-import Logo from "../Logo";
-import Banner from "../Banner";
+// import Button from "../Button";
+import Button from "../components/Button";
+// import Logo from "../Logo";
+import Logo from "../components/Logo";
+import Banner from "../components/Banner";
 
-import Facebook from "../../Icons/Facebook";
-import Instagram from "../../Icons/Instagram";
-import Twitter from "../../Icons/Twitter";
-import LinkedIn from "../../Icons/LinkedIn";
+import Facebook from "../Icons/Facebook";
+import Instagram from "../Icons/Instagram";
+import Twitter from "../Icons/Twitter";
+import LinkedIn from "../Icons/LinkedIn";
 
 const Section = styled.section`
   min-height: 70vh;
