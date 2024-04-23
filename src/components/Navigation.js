@@ -44,15 +44,13 @@ const MenuItem = styled.li`
   }
 `;
 
-const GoToAppButton = styled.button`
+const GoToAppLink = styled.a`
   padding: 10px 20px;
   border-radius: 10px;
-  backgroundColor: "black"
-  color: black;
-  border: none;
+  background-color: black; /* Corrected syntax */
+  color: white; /* Changed color */
+  text-decoration: none; /* Remove underline */
   cursor: pointer;
-  widht: 70px;
-  color: "white";
 `;
 
 const Navigation = () => {
@@ -71,10 +69,6 @@ const Navigation = () => {
   const goToApp = () => {
     navigate("/hello");
   };
-  const handleGoToApp = () => {
-    window.location.href = '/nft-drop'; // Navigate to "/hello" when button is clicked
-  };
-
 
   return (
     <Section>
@@ -87,7 +81,9 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
         </Menu>
-        <GoToAppButton onClick={handleGoToApp}>Go to App</GoToAppButton>
+        <GoToAppLink href="https://app.raindropsx.com/" target="_blank">
+          Go to App
+        </GoToAppLink>
       </NavBar>
     </Section>
   );
