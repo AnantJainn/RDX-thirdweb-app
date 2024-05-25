@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import Button from "./Button";
 import Logo from "./Logo";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 const Section = styled.section`
   width: 100vw;
@@ -47,15 +47,15 @@ const MenuItem = styled.li`
 const GoToAppLink = styled.a`
   padding: 10px 20px;
   border-radius: 10px;
-  background-color: black; /* Corrected syntax */
-  color: white; /* Changed color */
-  text-decoration: none; /* Remove underline */
+  background-color: black;
+  color: white;
+  text-decoration: none;
   cursor: pointer;
 `;
 
 const Navigation = () => {
   const navigate = useNavigate();
-
+  // const blogsection = navigate("/blogs");
   const scrollTo = (id) => {
     let element = document.getElementById(id);
 
@@ -69,7 +69,14 @@ const Navigation = () => {
   const goToApp = () => {
     navigate("/hello");
   };
+  const StyledLink = styled(Link)`
+    color: ${(props) => props.theme.text};
+    text-decoration: none;
 
+    &:hover {
+      color: ${(props) => props.theme.text};
+    }
+  `;
   return (
     <Section>
       <NavBar>
@@ -79,6 +86,9 @@ const Navigation = () => {
           <MenuItem onClick={() => scrollTo("about")}>About</MenuItem>
           <MenuItem onClick={() => scrollTo("roadmap")}>Roadmap</MenuItem>
           <MenuItem onClick={() => scrollTo("showcase")}>Showcase</MenuItem>
+          <MenuItem>
+            <StyledLink to="/blogs">Blogs</StyledLink>
+          </MenuItem>
           <MenuItem onClick={() => scrollTo("faq")}>Faq</MenuItem>
         </Menu>
         <GoToAppLink href="https://app.raindropsx.com/" target="_blank">
