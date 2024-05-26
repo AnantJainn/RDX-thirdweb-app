@@ -11,6 +11,7 @@ import About from "./sections/About";
 import Roadmap from "./sections/Roadmap";
 import Showcase from "./sections/Showcase";
 import Blogs from "./Pages/Blogs";
+import BlogDetails from "./Pages/BlogDetails";
 // import Team from "./components/sections/Team"; // Commented as per your existing code
 import Faq from "./sections/Faq";
 import Footer from "./sections/footer";
@@ -62,6 +63,7 @@ function App() {
           <Route path="/nft-drop" element={<NFTDrop />} />
           <Route path="/profile/:address" element={<Profile />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog-details/:id" element={<BlogDetails />} />
         </Routes>
       </ThemeProvider>
     </ThirdwebProvider>
